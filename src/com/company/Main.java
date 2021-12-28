@@ -4,7 +4,7 @@ import coordinates.Circle;
 import coordinates.PointList;
 import human.Human;
 
-import java.awt.*;
+
 import java.util.Scanner;
 
 public class Main {
@@ -16,27 +16,27 @@ public class Main {
     }
 
     private static void menu() {
-        PointList pointList=new PointList();
+        PointList pointList = new PointList();
         System.out.println("| введите координаты точки");
         System.out.print("|x: ");
         double x = sc.nextInt();
         System.out.print("|y: ");
         double y = sc.nextInt();
-        pointList.add(x,y);
+        pointList.add(x, y);
         pointList.size();
         options(pointList);
         System.out.println("Введите координаты центра и радиуса окружности: ");
         System.out.print("center x: ");
-        double centerX=sc.nextDouble();
+        double centerX = sc.nextDouble();
         System.out.print("center y: ");
-        double centerY=sc.nextDouble();
+        double centerY = sc.nextDouble();
         System.out.print("radius: ");
-        double radius=sc.nextDouble();
-        Circle circle=new Circle(centerX,centerY,radius);
+        double radius = sc.nextDouble();
+        Circle circle = new Circle(centerX, centerY, radius);
         circle.checkPoints(pointList);
     }
 
-    private static void options(PointList pointList){
+    private static void options(PointList pointList) {
 
         System.out.println("| Желаете добавить еще (1-да 2-нет)");
         int option = sc.nextInt();
@@ -48,7 +48,7 @@ public class Main {
                 double x = sc.nextInt();
                 System.out.print("|y: ");
                 double y = sc.nextInt();
-                pointList.add(x,y);
+                pointList.add(x, y);
                 System.out.println(pointList.size());
                 options(pointList);
                 break;
@@ -63,8 +63,6 @@ public class Main {
 
 
     }
-
-
 
 
     //Задача 1 (разминка)
